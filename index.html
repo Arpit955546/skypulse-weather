@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Weather App</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="weather-app">
+
+
+      
+        <h1>🌦️ Weather App</h1>
+
+        <p class="subtitle">
+            Check the current weather of any location
+        </p>
+
+
+       
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+
+      
+        <button
+            id="locationBtn"
+            class="location-btn"
+        >
+            📍 Use My Location
+        </button>
+
+
+       
+        <p id="loading">
+            Loading...
+        </p>
+
+
+      
+        <p id="error"></p>
+
+
+    
+        <div class="weather-card">
+
+
+            <h2 id="cityName">
+                Lucknow
+            </h2>
+
+
+            <p id="country">
+                India
+            </p>
+
+
+            <p id="dateTime">
+                Loading date and time...
+            </p>
+
+
+            <!-- WEATHER ICON -->
+
+            <div id="weatherIcon">
+                ☀️
+            </div>
+
+
+            <!-- TEMPERATURE -->
+
+            <div id="temperature">
+                --°C
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <p id="description">
+                Loading...
+            </p>
+
+
+            <!-- =========================
+                 WEATHER DETAILS
+            ========================== -->
+
+            <div class="weather-details">
+
+
+                <!-- HUMIDITY -->
+
+                <div class="detail">
+
+                    <span>💧</span>
+
+                    <p>
+                        Humidity
+                    </p>
+
+                    <strong id="humidity">
+                        --%
+                    </strong>
+
+                </div>
+
+
+                <!-- WIND -->
+
+                <div class="detail">
+
+                    <span>💨</span>
+
+                    <p>
+                        Wind Speed
+                    </p>
+
+                    <strong id="wind">
+                        -- km/h
+                    </strong>
+
+                </div>
+
+
+                <!-- FEELS LIKE -->
+
+                <div class="detail">
+
+                    <span>🌡️</span>
+
+                    <p>
+                        Feels Like
+                    </p>
+
+                    <strong id="feelsLike">
+                        --°C
+                    </strong>
+
+                </div>
+
+
+                <!-- RAIN PROBABILITY -->
+
+                <div class="detail">
+
+                    <span>🌧️</span>
+
+                    <p>
+                        Rain Probability
+                    </p>
+
+                    <strong id="rainProbability">
+                        --%
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+      
+        <div class="hourly-section">
+
+
+            <h2>
+                🌧️ Today's Hourly Weather
+            </h2>
+
+
+            <p class="section-subtitle">
+                Hour-by-hour weather details
+            </p>
+
+
+            <div
+                id="hourlyRainContainer"
+                class="hourly-rain-container"
+            >
+
+                <!-- JS cards -->
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="forecast-section">
+
+
+            <h2>
+                📅 5-Day Forecast
+            </h2>
+
+
+            <p class="forecast-hint">
+                Click any day to see complete hourly weather
+            </p>
+
+
+            <div
+                id="forecastContainer"
+                class="forecast-container"
+            >
+
+                <!-- JS cards -->
+
+            </div>
+
+
+        </div>
+
+
+
+      
+        <div
+            id="dailyHourlySection"
+            class="daily-hourly-section"
+        >
+
+
+            <h2 id="selectedDayTitle">
+                🌦️ Hourly Weather
+            </h2>
+
+
+            <p id="selectedDayDate">
+                Select a day above
+            </p>
+
+
+            <div
+                id="dailyHourlyContainer"
+                class="daily-hourly-container"
+            >
+
+                <!-- JS cards -->
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+ 
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
